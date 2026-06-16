@@ -21,7 +21,9 @@ pipeline{
 			}
 		stage('run application'){
 			steps{
-				sh 'java -jar target/sauce-1.0-SNAPSHOT.jar'
+				sh '''
+				nohup java -jar target/sauce-1.0-SNAPSHOT.jar > app.log 2>&1 &
+				'''
 			}
 		}
 	}
