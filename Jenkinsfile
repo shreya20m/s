@@ -6,7 +6,7 @@ pipline{
 	stages{
 		stage('checkout'){
 			steps{
-				git branch:'master', url:''
+				git branch:'master', url:'https://github.com/shreya20m/s.git'
 		}
 		}
 		stage('build'){
